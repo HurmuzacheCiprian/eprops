@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="132a5242-95ba-442a-be07-3971705bf1bb" name="Default" comment="- change the application endpoints to accept an environment as the applications should be created based on the environment">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/eprops/eprops/exception/ApplicationNotFoundException.java" />
+    <list default="true" id="132a5242-95ba-442a-be07-3971705bf1bb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/eprops/eprops/model/Application.java" afterPath="$PROJECT_DIR$/src/main/java/com/eprops/eprops/model/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/eprops/eprops/model/Environment.java" afterPath="$PROJECT_DIR$/src/main/java/com/eprops/eprops/model/Environment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/eprops/eprops/resource/EnvironmentResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/eprops/eprops/resource/EnvironmentResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/eprops/eprops/service/ApplicationService.java" afterPath="$PROJECT_DIR$/src/main/java/com/eprops/eprops/service/ApplicationService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/eprops/eprops/service/EnvironmentService.java" afterPath="$PROJECT_DIR$/src/main/java/com/eprops/eprops/service/EnvironmentService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EnvironmentService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EnvironmentService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/eprops/eprops/service/EnvironmentService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
+            <state relative-caret-position="544">
               <caret line="40" column="26" lean-forward="false" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
               <folding />
             </state>
@@ -117,11 +112,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EnvironmentResource.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EnvironmentResource.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/eprops/eprops/resource/EnvironmentResource.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
-              <caret line="28" column="58" lean-forward="true" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
+              <caret line="28" column="75" lean-forward="false" selection-start-line="28" selection-start-column="75" selection-end-line="28" selection-end-column="75" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -210,11 +205,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/eprops/eprops/exception/EnvironmentNotFoundException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eprops/eprops/resource/ApplicationResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eprops/eprops/service/ApplicationService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/eprops/eprops/resource/EnvironmentResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eprops/eprops/exception/ApplicationNotFoundException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eprops/eprops/model/Environment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eprops/eprops/model/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eprops/eprops/service/EnvironmentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/eprops/eprops/resource/EnvironmentResource.java" />
       </list>
     </option>
   </component>
@@ -1128,7 +1123,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1494593935821</updated>
-      <workItem from="1494593943585" duration="14870000" />
+      <workItem from="1494593943585" duration="14935000" />
     </task>
     <task id="LOCAL-00001" summary="- added travis file">
       <created>1494595280642</created>
@@ -1186,7 +1181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494621673323</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="- change the environment apis as we need to link an environment the application">
+      <created>1494623009067</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1494623009067</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1222,7 +1224,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14870000" />
+    <option name="totallyTimeSpent" value="14935000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1276,7 +1278,8 @@
     <MESSAGE value="- refactored to SshCommandRunner so that unit tests could be performed easier&#10;- added unit tests to convert a String result of type properties file into a java.util.Property object" />
     <MESSAGE value="- added new resource for property files" />
     <MESSAGE value="- added new exception for the Application class&#10;- added new service and resource and CRUD operations for an Application&#10;- removed unused imports" />
-    <option name="LAST_COMMIT_MESSAGE" value="- added new exception for the Application class&#10;- added new service and resource and CRUD operations for an Application&#10;- removed unused imports" />
+    <MESSAGE value="- change the environment apis as we need to link an environment the application" />
+    <option name="LAST_COMMIT_MESSAGE" value="- change the environment apis as we need to link an environment the application" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1648,16 +1651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/eprops/eprops/resource/EnvironmentResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="28" column="58" lean-forward="true" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/eprops/eprops/exception/SshCommandException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1701,9 +1694,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/eprops/eprops/service/EnvironmentService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
+        <state relative-caret-position="544">
           <caret line="40" column="26" lean-forward="false" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/eprops/eprops/resource/EnvironmentResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="28" column="75" lean-forward="false" selection-start-line="28" selection-start-column="75" selection-end-line="28" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

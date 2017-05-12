@@ -21,12 +21,12 @@ public class EnvironmentResource {
     @RequestMapping(method = RequestMethod.POST)
     public void create(@PathVariable("applicationId") Long applicationId,
                        @RequestBody Environment environment) {
-        environmentService.create(environment);
+        environmentService.create(applicationId, environment);
     }
 
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<List<Environment>> getAll(@PathVariable("applicationId") Long applicationId) {
-        return new ResponseEntity<>(environmentService.getAll(), HttpStatus.OK);
+        return new ResponseEntity<>(environmentService.getAll(applicationId), HttpStatus.OK);
     }
 
 }
