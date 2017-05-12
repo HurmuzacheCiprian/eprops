@@ -1,7 +1,7 @@
 package com.eprops.eprops.resource;
 
 import com.eprops.eprops.model.SshCommand;
-import com.eprops.eprops.service.SshService;
+import com.eprops.eprops.service.SshCommandRunner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,16 +14,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/ssh-commands")
 public class SshResource {
 
-    private final SshService sshService;
+    private final SshCommandRunner sshCommandRunner;
 
     @Autowired
-    public SshResource(SshService sshService) {
-        this.sshService = sshService;
+    public SshResource(SshCommandRunner sshCommandRunner) {
+        this.sshCommandRunner = sshCommandRunner;
     }
 
     @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity<String> execute(@RequestBody SshCommand command) {
-        return new ResponseEntity<>(sshService.executeCommand(command), HttpStatus.OK);
+        return new ResponseEntity<>(sshCommandRunner.executeCommand(command), HttpStatus.OK);
     }
 
 }
