@@ -4,7 +4,6 @@
     <list default="true" id="132a5242-95ba-442a-be07-3971705bf1bb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/eprops/eprops/resource/EnvironmentResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/eprops/eprops/resource/EnvironmentResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/eprops/eprops/service/EnvironmentService.java" afterPath="$PROJECT_DIR$/src/main/java/com/eprops/eprops/service/EnvironmentService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,14 +22,28 @@
       <file leaf-file-name="EnvironmentResource.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/eprops/eprops/resource/EnvironmentResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="38" column="31" lean-forward="true" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+            <state relative-caret-position="402">
+              <caret line="26" column="43" lean-forward="false" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1337#1338#0" expanded="true" />
-                <element signature="e#1393#1394#0" expanded="true" />
-                <element signature="e#1545#1546#0" expanded="true" />
-                <element signature="e#1597#1598#0" expanded="true" />
+                <element signature="e#1365#1366#0" expanded="true" />
+                <element signature="e#1421#1422#0" expanded="true" />
+                <element signature="e#1585#1586#0" expanded="true" />
+                <element signature="e#1637#1638#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApplicationResource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/eprops/eprops/resource/ApplicationResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#650#651#0" expanded="true" />
+                <element signature="e#704#705#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,8 +133,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/eprops/eprops/exception/ApplicationNotFoundException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eprops/eprops/model/Environment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eprops/eprops/model/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/eprops/eprops/resource/EnvironmentResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eprops/eprops/service/EnvironmentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/eprops/eprops/resource/EnvironmentResource.java" />
       </list>
     </option>
   </component>
@@ -1035,7 +1048,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1494593935821</updated>
-      <workItem from="1494593943585" duration="15225000" />
+      <workItem from="1494593943585" duration="15356000" />
     </task>
     <task id="LOCAL-00001" summary="- added travis file">
       <created>1494595280642</created>
@@ -1107,7 +1120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494623038500</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="- added CRUD operations for environment">
+      <created>1494623341323</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1494623341323</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1143,7 +1163,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15225000" />
+    <option name="totallyTimeSpent" value="15356000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1198,7 +1218,8 @@
     <MESSAGE value="- added new resource for property files" />
     <MESSAGE value="- added new exception for the Application class&#10;- added new service and resource and CRUD operations for an Application&#10;- removed unused imports" />
     <MESSAGE value="- change the environment apis as we need to link an environment the application" />
-    <option name="LAST_COMMIT_MESSAGE" value="- change the environment apis as we need to link an environment the application" />
+    <MESSAGE value="- added CRUD operations for environment" />
+    <option name="LAST_COMMIT_MESSAGE" value="- added CRUD operations for environment" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1595,45 +1616,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/eprops/eprops/resource/ApplicationResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#480#481#0" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="e#650#651#0" expanded="true" />
-            <element signature="e#704#705#0" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#914#915#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-            <element signature="e#1076#1077#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/eprops/eprops/exception/SshCommandException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
           <folding>
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#370#371#0" expanded="true" />
+            <element signature="e#340#341#0" expanded="false" />
+            <element signature="e#370#371#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/eprops/eprops/resource/ApplicationResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#650#651#0" expanded="true" />
+            <element signature="e#704#705#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/eprops/eprops/resource/EnvironmentResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="38" column="31" lean-forward="true" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+        <state relative-caret-position="402">
+          <caret line="26" column="43" lean-forward="false" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1337#1338#0" expanded="true" />
-            <element signature="e#1393#1394#0" expanded="true" />
-            <element signature="e#1545#1546#0" expanded="true" />
-            <element signature="e#1597#1598#0" expanded="true" />
+            <element signature="e#1365#1366#0" expanded="true" />
+            <element signature="e#1421#1422#0" expanded="true" />
+            <element signature="e#1585#1586#0" expanded="true" />
+            <element signature="e#1637#1638#0" expanded="true" />
           </folding>
         </state>
       </provider>
