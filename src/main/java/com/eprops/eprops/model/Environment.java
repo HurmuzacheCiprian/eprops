@@ -20,7 +20,4 @@ public class Environment {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(fetch = FetchType.EAGER)
-    private List<Application> applications;
-
 }

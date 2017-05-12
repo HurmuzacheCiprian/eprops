@@ -14,7 +14,8 @@ public class ApplicationService {
     private final ApplicationRepository applicationRepository;
     private final LoggingService loggingService;
 
-    public ApplicationService(ApplicationRepository applicationRepository, LoggingService loggingService) {
+    public ApplicationService(ApplicationRepository applicationRepository,
+                              LoggingService loggingService) {
         this.applicationRepository = applicationRepository;
         this.loggingService = loggingService;
     }
