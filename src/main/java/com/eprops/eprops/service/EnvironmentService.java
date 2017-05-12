@@ -41,4 +41,11 @@ public class EnvironmentService {
         return application.getEnvironments();
     }
 
+    public void delete(Long environmentId) {
+        environmentRepository.delete(environmentId);
+    }
+
+    public void edit(Environment environment) {
+        environmentRepository.save(environment);
+    }
 }

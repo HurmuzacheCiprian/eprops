@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/{applicationId}/environments")
+@RequestMapping("/api/applications")
 public class EnvironmentResource {
 
     private final EnvironmentService environmentService;
@@ -18,15 +18,25 @@ public class EnvironmentResource {
         this.environmentService = environmentService;
     }
 
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(value = "/{applicationId}/environments", method = RequestMethod.POST)
     public void create(@PathVariable("applicationId") Long applicationId,
                        @RequestBody Environment environment) {
         environmentService.create(applicationId, environment);
     }
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(value = "/{applicationId}/environments", method = RequestMethod.GET)
     public ResponseEntity<List<Environment>> getAll(@PathVariable("applicationId") Long applicationId) {
         return new ResponseEntity<>(environmentService.getAll(applicationId), HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/environments/{environmentId}", method = RequestMethod.POST)
+    public void delete(@PathVariable("environmentId") Long environmentId) {
+        environmentService.delete(environmentId);
+    }
+
+    @RequestMapping(value = "/environments/{environmentId}", method = RequestMethod.POST)
+    public void edit(@RequestBody Environment environment) {
+        environmentService.edit(environment);
     }
 
 }
