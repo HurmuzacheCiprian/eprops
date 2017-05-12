@@ -31,5 +31,4 @@ public class EnvironmentResource {
         return new ResponseEntity<>(environmentService.getAll(), HttpStatus.OK);
     }
 
-
 }
