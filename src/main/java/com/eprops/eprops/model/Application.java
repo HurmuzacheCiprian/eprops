@@ -4,23 +4,22 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
-import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Environment {
+public class Application {
 
     @Id
     @GeneratedValue
-    private Long environment;
+    private Long id;
 
     @Column(name = "name")
     private String name;
-
-    @OneToMany(fetch = FetchType.EAGER)
-    private List<Application> applications;
 
 }

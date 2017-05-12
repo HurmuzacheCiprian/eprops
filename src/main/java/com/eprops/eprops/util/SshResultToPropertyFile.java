@@ -1,6 +1,5 @@
 package com.eprops.eprops.util;
 
-import com.eprops.eprops.model.PropertyFile;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +12,6 @@ import java.util.Properties;
 public class SshResultToPropertyFile {
 
     public Properties createPropertyFile(String result) {
-        PropertyFile file = new PropertyFile();
         final Properties p = new Properties();
         try {
             p.load(new StringReader(result));
