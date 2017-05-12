@@ -3,6 +3,8 @@ package com.eprops.eprops.resource;
 import com.eprops.eprops.model.Application;
 import com.eprops.eprops.service.ApplicationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -31,5 +33,8 @@ public class ApplicationResource {
         applicationService.edit(application);
     }
 
-
+    @RequestMapping(value = "/{applicationId}", method = RequestMethod.GET)
+    public ResponseEntity<Application> get(@PathVariable("applicationId") Long applicationId) {
+        return new ResponseEntity<>(applicationService.get(applicationId), HttpStatus.OK);
+    }
 }

@@ -37,4 +37,7 @@ public class ApplicationService {
         applicationRepository.save(application);
     }
 
+    public Application get(Long applicationId) {
+        return applicationRepository.findOne(applicationId);
+    }
 }
