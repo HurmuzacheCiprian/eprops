@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/applications")
 public class ApplicationResource {
@@ -19,22 +21,30 @@ public class ApplicationResource {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public void add(@RequestBody Application application) {
+    public ResponseEntity add(@RequestBody Application application) {
         applicationService.create(application);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @RequestMapping(value = "/{applicationId}", method = RequestMethod.POST)
-    public void delete(@PathVariable("applicationId") Long applicationId) {
+    public ResponseEntity delete(@PathVariable("applicationId") Long applicationId) {
         applicationService.delete(applicationId);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.PUT)
-    public void edit(@RequestBody Application application) {
+    public ResponseEntity edit(@RequestBody Application application) {
         applicationService.edit(application);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @RequestMapping(value = "/{applicationId}", method = RequestMethod.GET)
     public ResponseEntity<Application> get(@PathVariable("applicationId") Long applicationId) {
         return new ResponseEntity<>(applicationService.get(applicationId), HttpStatus.OK);
+    }
+
+    @RequestMapping(method = RequestMethod.GET)
+    public ResponseEntity<List<Application>> getAll() {
+        return new ResponseEntity<>(applicationService.getAll(), HttpStatus.OK);
     }
 }

@@ -8,6 +8,8 @@ import com.eprops.eprops.util.LoggingService;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ApplicationService {
 
@@ -39,5 +41,9 @@ public class ApplicationService {
 
     public Application get(Long applicationId) {
         return applicationRepository.findOne(applicationId);
+    }
+
+    public List<Application> getAll() {
+        return applicationRepository.findAll();
     }
 }
