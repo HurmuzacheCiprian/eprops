@@ -17,9 +17,12 @@ public class Environment {
 
     @Id
     @GeneratedValue
-    private Long environment;
+    private Long id;
 
     @Column(name = "name")
     private String name;
+
+    @Column(name = "host")
+    private String host;
 
 }

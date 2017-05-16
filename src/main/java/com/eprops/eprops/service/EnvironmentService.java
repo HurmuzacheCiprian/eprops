@@ -48,4 +48,8 @@ public class EnvironmentService {
     public void edit(Environment environment) {
         environmentRepository.save(environment);
     }
+
+    public Environment get(Long environmentId) {
+        return this.environmentRepository.findOne(environmentId);
+    }
 }

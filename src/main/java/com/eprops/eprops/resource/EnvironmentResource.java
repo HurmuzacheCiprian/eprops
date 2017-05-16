@@ -39,4 +39,9 @@ public class EnvironmentResource {
         environmentService.edit(environment);
     }
 
+    @RequestMapping(value = "/applications/environments/{environmentId}", method = RequestMethod.GET)
+    public ResponseEntity get(@PathVariable("environmentId") Long environmentId) {
+        return new ResponseEntity<>(environmentService.get(environmentId), HttpStatus.OK);
+    }
+
 }

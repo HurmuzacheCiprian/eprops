@@ -1,5 +1,6 @@
 package com.eprops.eprops.resource;
 
+import com.eprops.eprops.model.Response;
 import com.eprops.eprops.model.SshCommand;
 import com.eprops.eprops.service.SshCommandRunner;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +23,9 @@ public class SshResource {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<String> execute(@RequestBody SshCommand command) {
-        return new ResponseEntity<>(sshCommandRunner.executeCommand(command), HttpStatus.OK);
+    public ResponseEntity<Response> execute(@RequestBody SshCommand command) {
+        Response response = new Response(sshCommandRunner.executeCommand(command));
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
 }
